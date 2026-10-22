@@ -1,0 +1,194 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #222;
+    background: white;
+}
+
+.profile-container {
+    width: 700px;
+    max-width: 100%;
+    min-height: 770px;
+    margin: auto;
+    padding: 30px 26px;
+    border: 3px solid #555;
+}
+
+/* Header */
+.profile-header {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr) 95px;
+    gap: 20px;
+    align-items: start;
+    min-height: 235px;
+}
+
+/* Foto profil */
+.foto {
+    display: flex;
+    width: 140px;
+    height: 200px;
+    border: 3px solid #555;
+    overflow: hidden;
+}
+
+.foto span,
+.gambar span {
+    position: absolute;
+    width: 145%;
+    height: 3px;
+    top: 50%;
+    left: 50%;
+    background: #555;
+}
+
+.foto span:first-child,
+.gambar span:first-child {
+    transform: translate(-50%, -50%) rotate(39deg);
+}
+
+.foto span:last-child,
+.gambar span:last-child {
+    transform: translate(-50%, -50%) rotate(-39deg);
+}
+
+/* Informasi profil */
+.info h1 {
+    margin: -5px 0 17px;
+    font-size: 29px;
+}
+
+.info p {
+    margin: 0 0 12px;
+    overflow-wrap: anywhere;
+}
+
+.info a,
+.lampiran a {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.sidebar h3 {
+    margin: 10px 0;
+    text-decoration: underline;
+}
+
+.sidebar p {
+    margin: 0 0 10px;
+    line-height: 1.4;
+}
+
+/* Deskripsi */
+.deskripsi {
+    margin-top: 20px;
+}
+
+.deskripsi p {
+    line-height: 1.5;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+/* Tiga panel bawah */
+.profile-footer {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1.35fr;
+    gap: 18px;
+    align-items: center;
+    margin-top: 75px;
+}
+
+/* Video */
+.video {
+    height: 95px;
+    border: 2px solid #555;
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Galeri */
+.galeri {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #777;
+}
+
+.galeri {
+    width: 95%;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* Lampiran */
+.lampiran {
+    height: 100px;
+    min-width: 0;
+    margin: 0;
+    padding: 10px 8px;
+    border: 2px solid #555;
+}
+
+.lampiran legend {
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.lampiran p {
+    margin: 0 0 8px;
+    font-size: 10px;
+    overflow-wrap: anywhere;
+}
+
+/* Tampilan HP */
+@media (max-width: 650px) {
+    body {
+        padding: 10px;
+    }
+
+    .profile-container {
+        padding: 18px;
+    }
+
+    .profile-header {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .sidebar {
+        text-align: left;
+    }
+
+    .profile-footer {
+        grid-template-columns: 1fr;
+        margin-top: 35px;
+    }
+
+    .video,
+    .galeri {
+        height: 180px;
+    }
+
+    .lampiran {
+        height: auto;
+        min-height: 140px;
+    }
+}
